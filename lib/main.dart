@@ -18,9 +18,8 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner:false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      // 样式
+      theme: ConfigService.to.isDarkModel ? AppTheme.dark : AppTheme.light,
       // 路由
       initialRoute: RouteNames.systemSplash,//
       getPages: RoutePages.list,
@@ -32,6 +31,7 @@ class MyApp extends StatelessWidget {
       supportedLocales: Translation.supportedLocales, // 支持的语言种类
       locale: ConfigService.to.locale, // 当前语言种类
       fallbackLocale: Translation.fallbackLocale, // 默认语言种类
+
     );
   }
 }

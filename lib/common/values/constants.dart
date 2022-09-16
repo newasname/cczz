@@ -5,4 +5,6 @@ class Constants {
   static const wpApiBaseUrl = 'https://wpapi.ducafecat.tech';
   // 本地存储key
   static const storageLanguageCode = 'language_code';
+  //切换主题功能
+  static const storageThemeCode = 'theme_code';
 }
