@@ -1,4 +1,0 @@
-library shlash;
-
-export './controller.dart';
-export './view.dart';

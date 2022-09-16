@@ -20,10 +20,10 @@ class MyApp extends StatelessWidget {
       ),
 
       // 路由
-      initialRoute: "/",
-      getPages: RoutePages.list,
+      // initialRoute: "/",
+      // getPages: RoutePages.list,
 
-      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: Container(child: Text('123'),color: Colors.red,),
     );
   }
 }
