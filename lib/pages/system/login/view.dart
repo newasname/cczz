@@ -19,11 +19,16 @@ class LoginPage extends GetView<LoginController> {
             },
             child: const Text("点击"),
           ),
+          ElevatedButton(
+            onPressed: () {
+              Get.toNamed('/splash');
+            },
+            child: const Text("splash"),
+          ),
         ],
       ),
     );
   }
-
   @override
   Widget build(BuildContext context) {
     return GetBuilder<LoginController>(
