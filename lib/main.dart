@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'common/index.dart';
 import 'common/routers/pages.dart';
 
 void main() {
@@ -22,8 +23,11 @@ class MyApp extends StatelessWidget {
       // 路由
       // initialRoute: "/",
       // getPages: RoutePages.list,
-
-      home: Container(child: Text('123'),color: Colors.red,),
+      // 路由
+      initialRoute: RouteNames.systemSplash,
+      getPages: RoutePages.list,
+      navigatorObservers: [RoutePages.observer],
+      //home: Container(child: Text('123'),color: Colors.red,),
     );
   }
 }
