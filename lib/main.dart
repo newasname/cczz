@@ -3,11 +3,12 @@ import 'package:get/get.dart';
 
 import 'common/index.dart';
 import 'common/routers/pages.dart';
+import 'global.dart';
 
-void main() {
+Future<void> main() async {
+  await Global.init();
   runApp(const MyApp());
 }
-
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -19,15 +20,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-
-      // 路由
-      // initialRoute: "/",
-      // getPages: RoutePages.list,
       // 路由
       initialRoute: RouteNames.systemSplash,
       getPages: RoutePages.list,
       navigatorObservers: [RoutePages.observer],
-      //home: Container(child: Text('123'),color: Colors.red,),
     );
   }
 }

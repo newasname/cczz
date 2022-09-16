@@ -36,6 +36,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   #getx
   get: ^4.6.5
+  #全局管理
+  package_info_plus: ^1.4.3+1
 
 dev_dependencies:
   flutter_test:
