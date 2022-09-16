@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../common/index.dart';
 import 'index.dart';
 
 class StyleIndexPage extends GetView<StyleIndexController> {
@@ -8,19 +9,24 @@ class StyleIndexPage extends GetView<StyleIndexController> {
 
   // 主视图
   Widget _buildView() {
-    return const Center(
-      child: Text("StyleIndexPage"),
-    );
+    return Column(children: [
+      ListTile(
+        onTap: controller.onLanguageSelected,
+        title: Text(
+          "语言 : ${ConfigService.to.locale.toLanguageTag()}",
+        ),
+      ),
+    ]);
   }
-
   @override
   Widget build(BuildContext context) {
     return GetBuilder<StyleIndexController>(
       init: StyleIndexController(),
-      id: "style_index",
+      id: "styles_index",
       builder: (_) {
         return Scaffold(
-          appBar: AppBar(title: const Text("style_index")),
+          // appBar: AppBar(title: const Text("styles_index")),
+          appBar: AppBar(title: Text(LocaleKeys.stylesTitle.tr)),
           body: SafeArea(
             child: _buildView(),
           ),
