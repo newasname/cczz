@@ -14,7 +14,7 @@ class Global {
     });
     // 工具类
     await Storage().init();
-    // 初始化服务
+    // 初始化服务 dio
     Get.put<WPHttpService>(WPHttpService());
   }
 }
