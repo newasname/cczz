@@ -42,7 +42,25 @@ dependencies:
   package_info_plus: ^1.4.3+1
   #kv形式 持久化数据
   shared_preferences: ^2.0.15
+  #网络
   dio: ^4.0.6
+  #icon
+  flutter_svg: ^1.1.5
+  badges: ^2.0.3
+  #图片 裁剪 翻转
+  extended_image: ^6.2.1
+  #屏幕适配
+  flutter_screenutil: ^5.5.4
+  #欢迎屏 banner viewpage viewpage2 功能
+  flutter_native_splash: ^2.2.9
+  carousel_slider: ^4.1.1
+  #表单效验
+  validatorless: ^1.2.1
+  #短信 pin
+  pinput: ^2.2.12
+  #提示功能插件
+  flutter_easyloading: ^3.0.5
+  encrypt: ^5.0.1
 
 dev_dependencies:
   flutter_test:
@@ -55,7 +73,6 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
   flutter_launcher_icons_maker: ^0.10.2
-
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
   # app 图标
@@ -66,7 +83,10 @@ flutter_icons:
   # image_path_ios: "assets/icons/launcher_ios.png"
   image_path_android: "assets/icons/launcher_android.png"
   adaptive_icon_background: "#ffffff"
-
+#设备启动图
+flutter_native_splash:
+  color: "#ffffff"
+  image: "assets/icons/launcher_android.png"
 # The following section is specific to Flutter packages.
 flutter:
 
@@ -79,7 +99,9 @@ flutter:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
-
+  assets:
+    - assets/images/
+    - assets/svgs/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
@@ -102,6 +124,16 @@ flutter:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
-  #
+  fonts:
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/Montserrat/Montserrat-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Montserrat/Montserrat-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Montserrat/Montserrat-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Montserrat/Montserrat-Bold.ttf
+          weight: 700
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

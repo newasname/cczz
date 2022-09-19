@@ -69,5 +69,11 @@ class ConfigService extends GetxService {
     await Storage().setString(Constants.storageThemeCode,
         _isDarkModel.value == true ? "dark" : "light");
   }
+// 是否首次打开
+  bool get isFirstOpen => Storage().getBool(Constants.storageFirstOpen);
 
+// 标记已打开app
+  void setAlreadyOpen() {
+    Storage().setBool(Constants.storageFirstOpen, true);
+  }
 }
